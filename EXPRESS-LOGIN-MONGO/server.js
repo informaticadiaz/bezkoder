@@ -11,7 +11,6 @@ const app = express();
 require('./routes/auth.routes')(app);
 require('./routes/user.routes')(app);
 
-
 db.mongoose
   .connect(process.env.MONGO_URI, {
   })
@@ -47,9 +46,6 @@ async function initial() {
     console.log("error", err);
     }
 };
-
-
-
 
 var corsOptions = {
   origin: "http://localhost:8081"
